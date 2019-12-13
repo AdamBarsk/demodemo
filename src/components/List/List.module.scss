@@ -1,0 +1,16 @@
+.container {
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  .party {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    padding: 50px 0;
+  }
+
+  .people {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}

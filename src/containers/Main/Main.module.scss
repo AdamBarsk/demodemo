@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+
+  .options {
+    display: flex;
+    justify-content: space-between;
+
+    .sort {
+      cursor: pointer;
+    }
+
+    .filtering {
+      display: flex;
+      flex-wrap: wrap;
+
+      > div {
+        text-align: center;
+        cursor: pointer;
+        padding: 5px;
+        width: 35px;
+        border: 1px solid black;
+      }
+    }
+  }
+}
