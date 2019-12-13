@@ -6,22 +6,35 @@
   .options {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 20px;
 
     .sort {
-      cursor: pointer;
+      display: flex;
+      flex: 1;
+      align-items: flex-end;
+
+      > div {
+        height: 35px;
+        cursor: pointer;
+      }
+
+      svg {
+        height: 100%;
+      }
     }
 
     .filtering {
       display: flex;
       flex-wrap: wrap;
+      flex: 1;
+    }
+  }
+}
 
-      > div {
-        text-align: center;
-        cursor: pointer;
-        padding: 5px;
-        width: 35px;
-        border: 1px solid black;
-      }
+@media screen and (min-width: 750px) {
+  .container {
+    .options {
+      padding-bottom: 50px;
     }
   }
 }

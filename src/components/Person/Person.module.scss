@@ -1,8 +1,31 @@
+@import "../../assets/variables/variables";
+
 .container {
+  background: white;
+  border-radius: 5px;
   width: 120px;
-  height: 160px;
+  height: 110px;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  box-shadow: $box-shadow;
+
+  position: relative;
+  margin-top: 65px;
+  padding-top: 45px;
+
+  .image {
+    position: absolute;
+    top: -40px;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    box-shadow: $box-shadow;
+  }
+
+  > div {
+    text-align: center;
+  }
 }

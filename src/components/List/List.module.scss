@@ -3,14 +3,21 @@
   overflow-x: hidden;
 
   .party {
-    font-size: 36px;
-    font-weight: bold;
-    text-align: center;
-    padding: 50px 0;
-  }
+    &:nth-child(odd) {
+      background: whitesmoke;
+    }
+    .header {
+      font-size: 50px;
+      font-weight: bold;
+      text-align: center;
+      padding: 35px 0;
+    }
 
-  .people {
-    display: flex;
-    flex-flow: row wrap;
+    .people {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      padding: 0 25px 50px;
+    }
   }
 }

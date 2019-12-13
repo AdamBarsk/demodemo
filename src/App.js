@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { container, content } from "./App.module.scss";
+import * as style from "./App.module.scss";
 import Axios from "axios";
 import Main from "./containers/Main/Main";
 
@@ -12,13 +12,17 @@ const App = () => {
       .catch(() => error < 4 && setError(error + 1));
   }, [error]);
 
-  return error === 4 ? (
-    <div className={container}>Refresh and try again...</div>
-  ) : (
-    <div className={container}>
-      <div className={content}>
-        <Main people={people} />
-      </div>
+  return (
+    <div className={style.container}>
+      {error === 4 ? (
+        "Refresh and try again..."
+      ) : people.length === 0 ? (
+        "Loading..."
+      ) : (
+        <div className={style.content}>
+          <Main people={people} />
+        </div>
+      )}
     </div>
   );
 };
